@@ -1,0 +1,163 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html{font-size: 16px;};
+
+
+/*navbar*/
+
+
+nav{
+    height:10rem;
+}
+
+.container-fluid{ 
+    /* background-color: blueviolet; */
+    background-color: white;
+    display: flexbox;
+    flex-direction: row;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+} 
+
+.navbar-collapse {
+    /* background-color: aqua; */
+    flex-basis: 100%;
+    flex-grow: 0.2;
+    align-items: center;
+}
+
+#span-img{
+margin-left: 0.5rem;
+margin-right: 0.5rem;
+}
+
+#LogoPrincipal{
+    
+    width: 22rem;
+    height: 10rem;
+}
+
+.nav-link{
+    color: #83764C; 
+    display: flex;
+    margin-right: 4rem;
+}
+
+.form-control {
+    border-color:#83764C;
+    margin-top: 1rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    width: 8rem;
+}
+
+.form-control::placeholder{
+    color: #83764C;
+}
+
+.material-icons{ /*icono de la lupita y el shopping car*/
+    width: 1.5rem;
+    height: 1.5rem;
+    color:#83764C;
+}
+
+.search{ /*icono de la lupita*/
+    margin-top: 1.4rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+}
+
+.card-img-top {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+/* V1
+.card-img-top:hover {
+    transform: scale(1.1); Aumenta el tamaño de la imagen al 110% 
+    transition: transform 0.3s;  Transición suave de la animación 
+}
+
+.card .position-relative {
+    width: 60%; 
+    height: auto;
+    margin: 20px auto;
+}
+
+
+.circle-background {
+    width: 100%;
+    padding-top: 100%;  Esta línea ayuda a mantener la proporción del círculo 
+    border-radius: 50%;
+    background-color: rgb(229,114,91);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+    z-index: 0;
+ 
+}
+
+
+.card-img-top:hover, 
+.card-img-top:hover + .circle-background {
+    transform: scale(1.1);  Aumenta el tamaño de la imagen y el círculo al 110% 
+}*/
+
+.position-relative {
+    margin-bottom: 30px; /* Agrega un margen inferior para evitar la superposición */
+}
+
+.circle-background {
+    position: absolute;
+    width: 220px; 
+    height: 220px;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    z-index: 1;
+    transform: scale(1); /* Para la animación inicial */
+    transition: transform 0.3s ease;
+}
+
+.texto {
+color: #83764C;
+text-align: justify;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.card:hover .circle-background {
+    transform: scale(1.1); /* Amplía el círculo un 10% al pasar el cursor */
+}
+
+.card-img-top {
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    transform: scale(1); /* Para la animación inicial */
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: translate(-50%, -50%) scale(2);/* Amplía la imagen un 10% al pasar el cursor */
+    top: 40%; 
+}
+
+.position-relative:hover .card-img-top,
+.position-relative:hover .circle-background {
+    transform: scale(1.1);
+}
