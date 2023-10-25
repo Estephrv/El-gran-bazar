@@ -83,10 +83,10 @@ margin-right: 0.5rem;
     z-index: 2;
     transition: transform 0.3s;
 }
-/* V1
+
 .card-img-top:hover {
-    transform: scale(1.1); Aumenta el tamaño de la imagen al 110% 
-    transition: transform 0.3s;  Transición suave de la animación 
+    transform: scale(1.1); /*Aumenta el tamaño de la imagen al 110% */
+    transition: transform 0.3s;  /*Transición suave de la animación */
 }
 
 .card .position-relative {
@@ -96,28 +96,42 @@ margin-right: 0.5rem;
 }
 
 
-.circle-background {
-    width: 100%;
-    padding-top: 100%;  Esta línea ayuda a mantener la proporción del círculo 
-    border-radius: 50%;
-    background-color: rgb(229,114,91);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.3s;
-    z-index: 0;
- 
+.card-img-top {
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    transform: scale(1); /*Para la animación inicial */
+    transition: transform 0.3s ease;
+}
+.card-body2{
+
+    justify-content: center;
+    text-align: justify;
+    padding-top: 10rem;
 }
 
 
+.texto {
+    color: #83764C;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+
 .card-img-top:hover, 
-.card-img-top:hover + .circle-background {
-    transform: scale(1.1);  Aumenta el tamaño de la imagen y el círculo al 110% 
-}*/
+.card-img-top:hover {
+    transform: translate(-50%, -50%) scale(2);
+    top: 40%;   /*Aumenta el tamaño de la imagen y el círculo al 110% */
+}
 
 .position-relative {
     margin-bottom: 30px; /* Agrega un margen inferior para evitar la superposición */
 }
+/*
 
 .circle-background {
     position: absolute;
@@ -126,7 +140,7 @@ margin-right: 0.5rem;
     background-color: #ff6b6b;
     border-radius: 50%;
     z-index: 1;
-    transform: scale(1); /* Para la animación inicial */
+    transform: scale(1); /* Para la animación inicial 
     transition: transform 0.3s ease;
 }
 
@@ -141,21 +155,21 @@ line-height: normal;
 }
 
 .card:hover .circle-background {
-    transform: scale(1.1); /* Amplía el círculo un 10% al pasar el cursor */
+    transform: scale(1.1); Amplía el círculo un 10% al pasar el cursor 
 }
 
 .card-img-top {
     width: 200px;
     height: 200px;
     z-index: 2;
-    transform: scale(1); /* Para la animación inicial */
+    transform: scale(1); Para la animación inicial 
     transition: transform 0.3s ease;
 }
 
 .card:hover .card-img-top {
-    transform: translate(-50%, -50%) scale(2);/* Amplía la imagen un 10% al pasar el cursor */
+    transform: translate(-50%, -50%) scale(2);Amplía la imagen un 10% al pasar el cursor 
     top: 40%; 
-}
+}*/
 
 .position-relative:hover .card-img-top,
 .position-relative:hover .circle-background {
